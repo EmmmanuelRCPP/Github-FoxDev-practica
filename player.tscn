@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://fn0aavpgmqwy"]
+[gd_scene load_steps=4 format=3 uid="uid://fn0aavpgmqwy"]
 
-[ext_resource type="Texture2D" uid="uid://b6f61m4xiuuys" path="res://icon.svg" id="1_4qxe3"]
-[ext_resource type="PackedScene" uid="uid://tl8h5kt04cj3" path="res://tears.tscn" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dkx02pxl6xcp3" path="res://player.jpeg" id="1_4flbx"]
 
 [sub_resource type="GDScript" id="GDScript_64bcn"]
 script/source = "extends CharacterBody2D
@@ -42,14 +41,10 @@ script = SubResource("GDScript_64bcn")
 
 [node name="Icon" type="Sprite2D" parent="."]
 modulate = Color(0.998666, 0.185805, 0, 1)
-texture = ExtResource("1_4qxe3")
+position = Vector2(0.375, 2.375)
+scale = Vector2(0.458889, 0.521111)
+texture = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_jiekj")
-
-[node name="CPUParticles2D" parent="." instance=ExtResource("2_onrkg")]
-position = Vector2(-21, 8)
-
-[node name="CPUParticles2D2" parent="." instance=ExtResource("2_onrkg")]
-position = Vector2(21, 9)

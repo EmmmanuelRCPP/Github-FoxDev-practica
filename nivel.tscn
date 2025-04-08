@@ -6,13 +6,13 @@
 [node name="Nivel" type="Node2D"]
 
 [node name="Plataforma" parent="." instance=ExtResource("1_c06ms")]
-position = Vector2(391, 554)
+position = Vector2(209, 358)
 
 [node name="Plataforma2" parent="." instance=ExtResource("1_c06ms")]
 position = Vector2(580, 553)
 
 [node name="Plataforma3" parent="." instance=ExtResource("1_c06ms")]
-position = Vector2(772, 557)
+position = Vector2(985, 302)
 
 [node name="Player" parent="." instance=ExtResource("2_ny06d")]
 position = Vector2(591, 144)
