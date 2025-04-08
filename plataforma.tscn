@@ -11,6 +11,6 @@ radius = 87.0
 shape = SubResource("CircleShape2D_j5r3h")
 
 [node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(0.444838, 0.30209, 4.81308e-08, 1)
+modulate = Color(2.40654e-06, 0.870694, 0.178624, 1)
 position = Vector2(0, -5)
 texture = ExtResource("1_u5esh")
