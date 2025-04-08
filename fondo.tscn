@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddetx3fcniesi"]
+
+[ext_resource type="Texture2D" uid="uid://bdxvxkv8usogg" path="res://minesky.jpg" id="1_ytsh8"]
+[ext_resource type="Texture2D" uid="uid://dir15xlb4savt" path="res://ground1.png" id="2_048q4"]
+[ext_resource type="Texture2D" uid="uid://c1u1maywblwxk" path="res://chiikawapng.png" id="3_f6v4j"]
+
+[node name="Fondo" type="Node2D"]
+
+[node name="Minesky" type="Sprite2D" parent="."]
+position = Vector2(545, 336)
+scale = Vector2(1.83136, 1.83136)
+texture = ExtResource("1_ytsh8")
+
+[node name="Ground1" type="Sprite2D" parent="."]
+position = Vector2(16.5, 674)
+scale = Vector2(0.681641, 0.681641)
+texture = ExtResource("2_048q4")
+
+[node name="Ground2" type="Sprite2D" parent="."]
+position = Vector2(364.5, 674)
+scale = Vector2(0.681641, 0.681641)
+texture = ExtResource("2_048q4")
+
+[node name="Ground3" type="Sprite2D" parent="."]
+position = Vector2(713.5, 674)
+scale = Vector2(0.681641, 0.681641)
+texture = ExtResource("2_048q4")
+
+[node name="Ground4" type="Sprite2D" parent="."]
+position = Vector2(1061.5, 674)
+scale = Vector2(0.681641, 0.681641)
+texture = ExtResource("2_048q4")
+
+[node name="Chiikawapng" type="Sprite2D" parent="."]
+position = Vector2(1046, 400)
+scale = Vector2(0.36087, 0.36087)
+texture = ExtResource("3_f6v4j")
