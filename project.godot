@@ -11,7 +11,10 @@ config_version=5
 [application]
 
 config/name="FoxDEv practica Github"
+<<<<<<< HEAD
 run/main_scene="uid://bau6wsc7yywq2"
+=======
+>>>>>>> e54c9304bdd34f8753d1c8db410406c3d4c3581e
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
