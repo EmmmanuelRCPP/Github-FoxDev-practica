@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://fn0aavpgmqwy"]
+[gd_scene load_steps=5 format=3 uid="uid://fn0aavpgmqwy"]
 
 [ext_resource type="Texture2D" uid="uid://b6f61m4xiuuys" path="res://icon.svg" id="1_4qxe3"]
+[ext_resource type="AudioStream" uid="uid://dj8ahwvitic86" path="res://Taco-Bell-Bong-Sound-Effect-_HD_.wav" id="2_onrkg"]
 
 [sub_resource type="GDScript" id="GDScript_64bcn"]
 script/source = "extends CharacterBody2D
@@ -21,6 +22,8 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		await get_tree().create_timer(0.6).timeout
+		$\"Taco-bell-bong-sound-effect-Hd\".play
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -46,3 +49,6 @@ texture = ExtResource("1_4qxe3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_jiekj")
+
+[node name="Taco-bell-bong-sound-effect-Hd" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_onrkg")
