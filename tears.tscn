@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://tl8h5kt04cj3"]
+[gd_scene load_steps=0 format=3 uid="uid://tl8h5kt04cj3"]
 
 [node name="CPUParticles2D" type="CPUParticles2D"]
 scale_amount_min = 2.0
