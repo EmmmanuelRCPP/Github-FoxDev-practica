@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmaeg2ri5t8rg"
+path="res://.godot/imported/BRAZILIAN DANÇA PHONK.mp3-40285137927fd0c38fa68118b3ecdda6.mp3str"
+
+[deps]
+
+source_file="res://BRAZILIAN DANÇA PHONK.mp3"
+dest_files=["res://.godot/imported/BRAZILIAN DANÇA PHONK.mp3-40285137927fd0c38fa68118b3ecdda6.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

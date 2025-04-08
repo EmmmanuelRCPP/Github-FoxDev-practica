@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bau6wsc7yywq2"]
+[gd_scene load_steps=4 format=3 uid="uid://bau6wsc7yywq2"]
 
 [ext_resource type="PackedScene" uid="uid://biqykifuqofy" path="res://plataforma.tscn" id="1_c06ms"]
 [ext_resource type="PackedScene" uid="uid://fn0aavpgmqwy" path="res://player.tscn" id="2_ny06d"]
+[ext_resource type="AudioStream" uid="uid://dmaeg2ri5t8rg" path="res://BRAZILIAN DANÇA PHONK.mp3" id="3_7gdj4"]
 
 [node name="Nivel" type="Node2D"]
 
@@ -16,3 +17,7 @@ position = Vector2(985, 302)
 
 [node name="Player" parent="." instance=ExtResource("2_ny06d")]
 position = Vector2(591, 144)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7gdj4")
+autoplay = true
