@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://fn0aavpgmqwy"]
+[gd_scene load_steps=8 format=3 uid="uid://fn0aavpgmqwy"]
 
 [ext_resource type="Texture2D" uid="uid://b6f61m4xiuuys" path="res://icon.svg" id="1_4qxe3"]
 [ext_resource type="PackedScene" uid="uid://tl8h5kt04cj3" path="res://tears.tscn" id="2_onrkg"]
@@ -7,11 +7,12 @@
 script/source = "extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 600.0
+const JUMP_VELOCITY = -40.0
 
 func _ready() -> void:
 	print(\"goodbye world\")
+	$AnimationPlayer.play(\"idle\")
 
 func _physics_process(delta: float) -> void:
 	
@@ -20,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+	if Input.is_action_just_pressed(\"ui_accept\"):
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -36,6 +37,43 @@ func _physics_process(delta: float) -> void:
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jiekj"]
 size = Vector2(104, 116)
+
+[sub_resource type="Animation" id="Animation_onrkg"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 6.28319, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_i3pqv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hqtel"]
+_data = {
+&"RESET": SubResource("Animation_i3pqv"),
+&"idle": SubResource("Animation_onrkg")
+}
 
 [node name="Player" type="CharacterBody2D"]
 script = SubResource("GDScript_64bcn")
@@ -53,3 +91,8 @@ position = Vector2(-21, 8)
 
 [node name="CPUParticles2D2" parent="." instance=ExtResource("2_onrkg")]
 position = Vector2(21, 9)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hqtel")
+}
