@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://fn0aavpgmqwy"]
+[gd_scene load_steps=5 format=3 uid="uid://fn0aavpgmqwy"]
 
 [ext_resource type="Texture2D" uid="uid://b6f61m4xiuuys" path="res://icon.svg" id="1_4qxe3"]
+[ext_resource type="PackedScene" uid="uid://tl8h5kt04cj3" path="res://tears.tscn" id="2_onrkg"]
 
 [sub_resource type="GDScript" id="GDScript_64bcn"]
 script/source = "extends CharacterBody2D
@@ -46,3 +47,9 @@ texture = ExtResource("1_4qxe3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_jiekj")
+
+[node name="CPUParticles2D" parent="." instance=ExtResource("2_onrkg")]
+position = Vector2(-21, 8)
+
+[node name="CPUParticles2D2" parent="." instance=ExtResource("2_onrkg")]
+position = Vector2(21, 9)

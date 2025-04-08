@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="FoxDEv practica Github"
-config/features=PackedStringArray("4.3", "Mobile")
+run/main_scene="uid://bau6wsc7yywq2"
+config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="uid://bau6wsc7yywq2"
 
 [rendering]
 
